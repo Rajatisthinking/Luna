@@ -94,51 +94,32 @@
 
 </head>
 
+
 <body>
 
-  <div class="container">
+  <div id='main' class='container'>
 
-    <div class="content">
+    <div class='content'>
 
-      <div class="image-container">
+      <div class='image-container'>
 
-        <img class="image" src="path_to_your_image.jpg" alt="Image">
-
-      </div>
-
-      <h1>A Tale of Night and the Moon</h1>
-
-      <p>Luna, the moon, shone brightly in the night sky. Orion, the mighty hunter, gazed upon her with admiration.</p>
-
-    </div>
-
-    
-
-    <div class="arrow" onclick="toggleAdditionalText()">&#8595;</div>
-
-    
-
-    <div class="additional-text">
-
-      <div class="image-container">
-
-        <img class="image" src="path_to_your_image.jpg" alt="Additional Image">
+        <img class='image' src='path_to_your_image.jpg' alt='Image'/>
 
       </div>
 
-      <h2>In the vast expanse of the night sky,</h2>
+      <h1>🌔</h1>
 
       <p>A mesmerizing tale unfolded between a radiant Moon named Luna and a captivating Night named Orion. Luna, with her ethereal glow, cast a luminous spell upon the Earth, while Orion, with his enigmatic presence, brought a sense of mystery and tranquility to the world.</p>
 
     </div>
 
-    
+    <div id='additional-text1' class='additional-text'>
 
-    <div class="additional-text">
+      <div class='arrow'></div>
 
-      <div class="image-container">
+      <div class='image-container'>
 
-        <img class="image" src="path_to_your_image.jpg" alt="Additional Image 2">
+        <img class='image' src='path_to_your_image.jpg' alt='Additional Image'/>
 
       </div>
 
@@ -148,27 +129,89 @@
 
     </div>
 
-    
+    <div id='additional-text2' class='additional-text'>
 
-    <!-- Repeat the above block for Additional Text 3 to 7 -->
+      <div class='arrow'></div>
 
-    
+      <div class='image-container'>
+
+        <img class='image' src='path_to_your_image.jpg' alt='Additional Image'/>
+
+      </div>
+
+      <h2>Orion, with his commanding presence,</h2>
+
+      <p>Stood as a celestial guardian, adorning the night sky with his majestic form. Cloaked in darkness, he emanated an aura of mystique and allure, beckoning the curious souls to explore the secrets that lay hidden within the depths of the cosmos.</p>
+
+    </div>
+
+    <div id='additional-text3' class='additional-text'>
+
+      <div class='arrow'></div>
+
+      <div class='image-container'>
+
+        <img class='image' src='path_to_your_image.jpg' alt='Additional Image'/>
+
+      </div>
+
+      <h2>As Luna and Orion crossed paths,</h2>
+
+      <p>In their celestial journey, they felt an irresistible pull, an undeniable connection that transcended the boundaries of their separate realms. Luna, fascinated by Orion's enigmatic nature, longed to unravel the mysteries that shrouded him. Orion, captivated by Luna's radiant light, yearned to bask in her gentle embrace.</p>
+
+    </div>
+
+    <div id='additional-text4' class='additional-text'>
+
+      <div class='arrow'></div>
+
+      <div class='image-container'>
+
+        <img class='image' src='path_to_your_image.jpg' alt='Additional Image'/>
+
+      </div>
+
+      <h2>In their celestial courtship, Luna shared</h2>
+
+      <p>The tales of her lunar realm, describing the tranquil landscapes and ethereal beings that inhabited her domain. Orion, in turn, confided in Luna about the wonders he had witnessed during his eternal vigil, from shimmering nebulae to distant galaxies, instilling in her a sense of awe and wonder.</p>
+
+    </div>
+
+    <div id='additional-text5' class='additional-text'>
+
+      <div class='arrow'></div>
+
+      <div class='image-container'>
+
+        <img class='image' src='path_to_your_image.jpg' alt='Additional Image'/>
+
+      </div>
+
+      <h2>As their bond deepened, Luna became a source</h2>
+
+      <p>Of solace and comfort for Orion. In the darkest hours of the night, when shadows threatened to consume his spirit, Luna would wrap her luminescent rays around him, whispering words of encouragement and filling his heart with hope.</p>
+
+    </div>
+
+    <!-- Add more additional text sections as needed -->
 
   </div>
 
   <script>
 
-    // Toggle additional text
+    const additionalTexts = document.querySelectorAll('.additional-text');
 
-    function toggleAdditionalText() {
+    additionalTexts.forEach(text => text.style.display = 'none');
 
-      const additionalTexts = document.querySelectorAll('.additional-text');
+    const arrows = document.querySelectorAll('.arrow');
 
-      additionalTexts.forEach(function(text) {
+    arrows.forEach(arrow => arrow.addEventListener('click', toggleAdditionalText));
 
-        text.style.display = text.style.display === 'none' ? 'block' : 'none';
+    function toggleAdditionalText(event) {
 
-      });
+      const text = event.target.nextElementSibling;
+
+      text.style.display = text.style.display === 'none' ? 'block' : 'none';
 
     }
 
