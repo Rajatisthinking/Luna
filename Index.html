@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>🌔</title>
+
+  <style>
+
+    body {
+
+      background-color: black;
+
+      color: white;
+
+    }
+
+    
+
+    .container {
+
+      text-align: center;
+
+    }
+
+    
+
+    .content {
+
+      margin-bottom: 20px;
+
+    }
+
+    
+
+    .image-container {
+
+      display: inline-block;
+
+      border: 2px solid white;
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+    }
+
+    
+
+    .image {
+
+      display: block;
+
+      width: 300px;
+
+      height: 300px;
+
+      object-fit: cover;
+
+    }
+
+    
+
+    .arrow {
+
+      font-size: 36px;
+
+      color: blue;
+
+      cursor: pointer;
+
+      transition: transform 0.3s ease;
+
+    }
+
+    
+
+    .arrow:hover {
+
+      transform: scale(1.2);
+
+    }
+
+    
+
+    .additional-text {
+
+      display: none;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="content">
+
+      <div class="image-container">
+
+        <img class="image" src="path_to_your_image.jpg" alt="Image">
+
+      </div>
+
+      <h1>A Tale of Night and the Moon</h1>
+
+      <p>Luna, the moon, shone brightly in the night sky. Orion, the mighty hunter, gazed upon her with admiration.</p>
+
+    </div>
+
+    
+
+    <div class="arrow" onclick="toggleAdditionalText()">&#8595;</div>
+
+    
+
+    <div class="additional-text">
+
+      <div class="image-container">
+
+        <img class="image" src="path_to_your_image.jpg" alt="Additional Image">
+
+      </div>
+
+      <h2>In the vast expanse of the night sky,</h2>
+
+      <p>A mesmerizing tale unfolded between a radiant Moon named Luna and a captivating Night named Orion. Luna, with her ethereal glow, cast a luminous spell upon the Earth, while Orion, with his enigmatic presence, brought a sense of mystery and tranquility to the world.</p>
+
+    </div>
+
+    
+
+    <div class="additional-text">
+
+      <div class="image-container">
+
+        <img class="image" src="path_to_your_image.jpg" alt="Additional Image 2">
+
+      </div>
+
+      <h2>Luna, with her graceful elegance,</h2>
+
+      <p>Danced across the heavens, captivating the hearts of all who beheld her celestial beauty. She radiated a gentle light that painted the night canvas in hues of silver and pearl, illuminating the dreams and aspirations of those who gazed upon her.</p>
+
+    </div>
+
+    
+
+    <!-- Repeat the above block for Additional Text 3 to 7 -->
+
+    
+
+  </div>
+
+  <script>
+
+    // Toggle additional text
+
+    function toggleAdditionalText() {
+
+      const additionalTexts = document.querySelectorAll('.additional-text');
+
+      additionalTexts.forEach(function(text) {
+
+        text.style.display = text.style.display === 'none' ? 'block' : 'none';
+
+      });
+
+    }
+
+  </script>
+
+</body>
+
+</html>
+
